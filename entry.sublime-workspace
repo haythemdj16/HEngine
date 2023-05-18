@@ -1,1 +1,254 @@
-{}
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"wPa",
+				"wParam"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Build All And Run",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Build All And Run",
+					""
+				],
+				[
+					"Build All And Run",
+					"Build Library"
+				],
+				[
+					"Build All And Run",
+					"Build Test"
+				],
+				[
+					"Build All And Run",
+					"Run Test"
+				]
+			],
+			[
+				"Build All And Run",
+				"Run Test"
+			]
+		],
+		[
+			[
+				[
+					"Build All And Run",
+					""
+				],
+				[
+					"Build All And Run",
+					"Build Library"
+				],
+				[
+					"Build All And Run",
+					"Build Test"
+				],
+				[
+					"Build All And Run",
+					"Run Test"
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Build All And Run",
+				""
+			]
+		]
+	],
+	"build_varint": "Run Test",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Dev/other/HEngine",
+		"/C/Dev/other/HEngine/HEngine",
+		"/C/Dev/other/HEngine/HEngine/include",
+		"/C/Dev/other/HEngine/HEngine/src"
+	],
+	"file_history":
+	[
+		"/C/Dev/other/HEngine/entry.sublime-project",
+		"/C/Dev/other/HEngine/HEngine/src/Application.cpp",
+		"/C/Dev/other/HEngine/HEngine/include/Application.h",
+		"/C/Dev/other/HEngine/HEngine/src/Event.cpp",
+		"/C/Dev/other/HEngine/HEngine/include/Event.h",
+		"/C/Dev/other/HEngine/Test/src/Test.cpp",
+		"/C/Dev/other/HEngine/HEngine/include/Layer.h",
+		"/C/Dev/other/HEngine/.gitignore",
+		"/C/Dev/other/HEngine/HEngine/include/EntryPoint.h",
+		"/C/Dev/HEngine/HEngine/src/Application.cpp",
+		"/C/Dev/other/HEngine/HEngine/include/HEngine.h",
+		"/C/Dev/HEngine/HEngine/src/Application.h",
+		"/C/Dev/HEngine/HEngine/src/Layer.h",
+		"/C/Dev/HEngine/HEngine/src/HEngine.h",
+		"/C/Dev/HEngine/HEngine/src/EntryPoint.h",
+		"/C/Dev/other/HEngine/HEngine/src/HEngine.cpp"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Viewportheight"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 126.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "entry.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

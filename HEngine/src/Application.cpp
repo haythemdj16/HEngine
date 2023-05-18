@@ -15,10 +15,20 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 		break;
 
 	case WM_SIZE:
+	{
 		int width = LOWORD(lParam);
 		int height = HIWORD(lParam);
 		HEngine::Application::Get().Resize(width, height);
 		return 0;
+	}
+
+	case WM_KEYDOWN:
+		HEngine::Event::keys[wParam] = 1;
+		break;
+
+	case WM_KEYUP:
+		HEngine::Event::keys[wParam] = 0;
+		break;
 	}
 
 	return DefWindowProc(hwnd, uMsg, wParam, lParam);
@@ -87,6 +97,15 @@ namespace HEngine
 
 		ShowWindow(hwnd, SW_SHOW);
 
+		Bitmapinfo.bmiHeader.biSize = sizeof(Bitmapinfo.bmiHeader);
+		Bitmapinfo.bmiHeader.biWidth = ViewportWidth;
+		Bitmapinfo.bmiHeader.biHeight = -ViewportHeight;
+		Bitmapinfo.bmiHeader.biPlanes = 1;
+		Bitmapinfo.bmiHeader.biBitCount = 32;
+		Bitmapinfo.bmiHeader.biCompression = BI_RGB;
+
+		hdc = GetDC(hwnd);
+
 		Running = true;
 	}
 
@@ -105,6 +124,11 @@ namespace HEngine
 		LayerStack.emplace_back(layer);
 	}
 
+	void Application::DrawPixels(uint32_t* pixels)
+	{
+		StretchDIBits(hdc, 0, 0, ViewportWidth, ViewportHeight, 0, 0, ViewportWidth, ViewportHeight, (const void*)pixels, &Bitmapinfo, DIB_RGB_COLORS, SRCCOPY);
+	}
+
 	void Application::Resize(int width, int height)
 	{
 		if(ViewportWidth == width && ViewportHeight == height)
@@ -112,6 +136,9 @@ namespace HEngine
 
 		ViewportWidth = width;
 		ViewportHeight = height;
+
+		Bitmapinfo.bmiHeader.biWidth = ViewportWidth;
+		Bitmapinfo.bmiHeader.biHeight = -ViewportHeight;
 
 		for(Layer* layer : LayerStack)
 			layer->OnResize(width, height);
@@ -129,7 +156,7 @@ namespace HEngine
 
 			for(Layer* layer : LayerStack)
 			{
-				layer->OnUpdate(1);
+				layer->OnUpdate(1.0f);
 				layer->OnRender();
 			}
 		}

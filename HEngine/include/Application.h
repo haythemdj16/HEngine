@@ -5,6 +5,7 @@
 #include <windows.h>
 
 #include "Layer.h"
+#include "Event.h"
 
 namespace HEngine
 {
@@ -19,13 +20,15 @@ namespace HEngine
 		static Application& Get();
 
 		void PushLayer(Layer* layer);
+		void DrawPixels(uint32_t* pixels);
 
 		void Resize(int width, int height);
 
 		void Run();
+		void ShutDown() { Running = false; }
 
 		int GetViewportWidth() const { return ViewportWidth; }
-		int GetViewpoerHeight() const { return ViewportHeight; }
+		int GetViewportHeight() const { return ViewportHeight; }
 
 	private:
 		void Init();
@@ -42,5 +45,7 @@ namespace HEngine
 
 		HINSTANCE hInstance;
 		HWND hwnd;
+		HDC hdc;
+		BITMAPINFO Bitmapinfo;
 	};
 }
